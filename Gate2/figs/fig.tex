@@ -1,0 +1,43 @@
+
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\small]
+\draw (-1.75,16.75) to[american voltage source,l={ \small $V_{dc}$}] (-1.75,12.25);
+\draw (0,14.75) to[Tnmos, transistors/scale=1.02] (0,16.75);
+\draw (0,12.25) to[Tnmos, transistors/scale=1.02] (0,14.75);
+\draw (1,15.25) to[D,l={ \small $Q_1      D_1$}] (1,16.5);
+\draw (1,12.75) to[D,l={ \small $Q_4      D_4$}] (1,14.25);
+\draw (0,14.75) to[short] (3.5,14.75);
+\draw (0,14.25) to[short] (1,14.25);
+\draw (0,12.5) to[short] (1,12.5);
+\draw (1,13) to[short] (1,12.5);
+\draw (0,15.25) to[short] (1,15.25);
+\draw (0,16.5) to[short] (1,16.5);
+\draw (2.5,14.75) to[Tnmos, transistors/scale=1.02] (2.5,16.75);
+\node at (0,14.75) [circ] {};
+\draw (2.5,12.25) to[Tnmos, transistors/scale=1.02] (2.5,14.75);
+\draw (3.25,15) to[D,l={ \small $Q_3  D_3$}] (3.25,16.5);
+\draw (3.25,12.75) to[D,l={ \small $Q_2   D_2$}] (3.25,14.25);
+\draw (2.5,16.5) to[short] (3.25,16.5);
+\draw (2.5,15) to[short] (3.25,15);
+\draw (2.5,14.25) to[short] (3.25,14.25);
+\draw (2.5,12.75) to[short] (3.25,12.75);
+\draw (2.5,14.25) to[short] (3,14.25);
+\draw (2.5,14.5) to[short] (3.75,14.5);
+\draw (3.5,14.75) to[short] (4,14.75);
+\draw (2.5,14.5) to[short] (4,14.5);
+\draw (4,14.75) to[short] (4,15.5);
+\draw (4,15.5) to[short] (4.5,15.5);
+\draw (4,14.5) to[short] (4,13.5);
+\draw (4,13.5) to[short] (4.5,13.5);
+\draw (4.5,15.5) to[L,l={ \small $L$} ] (7,15.5);
+\draw (7,15.5) to[R,l={ \small R}] (7,13.5);
+\draw (4.25,13.5) to[short] (7,13.5);
+\draw (-1.75,12.25) to[short] (2.5,12.25);
+\draw (-1.75,16.75) to[short] (2.5,16.75);
+\node at (2.5,14.5) [circ] {};
+\draw [->, >=Stealth] (5,15) -- (6.5,15)node[above] {$i_0$};
+\end{circuitikz}
+}
+
